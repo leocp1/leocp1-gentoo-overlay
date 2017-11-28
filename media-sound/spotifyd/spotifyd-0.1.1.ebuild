@@ -135,8 +135,8 @@ xdg-2.1.0
 
 inherit cargo
 
-DESCRIPTION="spotifyd"
-HOMEPAGE=""
+DESCRIPTION="A spotify playing daemon"
+HOMEPAGE="https://github.com/Spotifyd/spotifyd"
 SRC_URI="$(cargo_crate_uris ${CRATES})"
 RESTRICT="mirror"
 LICENSE="unknown license" # Update to proper Gentoo format
