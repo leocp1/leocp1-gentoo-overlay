@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<repositories version="1.0">
+  <repo priority="50" quality="experimental" status="unofficial">
+    <name>leocp1-overlay</name>
+    <description>leocp1's personal gentoo overlay</description>
+    <homepage>https://github.com/leocp1/leocp1-overlay</homepage>
+    <source type="git">git://github.com/leocp1/leocp1-overlay.git</source>
+  </repo>
+</repositories>
