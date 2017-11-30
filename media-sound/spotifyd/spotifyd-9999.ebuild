@@ -35,7 +35,7 @@ getopts-0.2.14
 hostname-0.1.3
 httparse-1.2.3
 hyper-0.11.1
-idna-0.1.2
+idna-0.1.4
 iovec-0.1.0
 itoa-0.3.1
 kernel32-sys-0.1.4
@@ -57,11 +57,11 @@ mio-0.6.9
 mio-uds-0.6.4
 miow-0.2.1
 multimap-0.3.0
-net2-0.2.29
+net2-0.2.30
 nix-0.8.1
-num-bigint-0.1.39
-num-integer-0.1.34
-num-traits-0.1.39
+num-bigint-0.1.40
+num-integer-0.1.35
+num-traits-0.1.40
 num_cpus-1.6.2
 ogg-sys-0.0.9
 percent-encoding-1.0.0
@@ -71,7 +71,7 @@ protobuf_macros-0.6.0
 quick-error-1.2.0
 quote-0.3.15
 rand-0.3.15
-redox_syscall-0.1.21
+redox_syscall-0.1.26
 regex-0.2.2
 regex-syntax-0.4.1
 rpassword-0.3.1
@@ -99,7 +99,7 @@ syntex_pos-0.58.1
 syntex_syntax-0.58.1
 syslog-3.2.0
 take-0.1.0
-tempfile-2.1.5
+tempfile-2.1.6
 term-0.4.6
 termios-0.2.2
 thread_local-0.3.4
@@ -135,8 +135,9 @@ xdg-2.1.0
 
 inherit cargo
 
-DESCRIPTION="A spotify playing daemon"
-HOMEPAGE="https://github.com/Spotifyd/spotifyd"
+DESCRIPTION="spotifyd"
+EGIT_REPO_URI="https://github.com/Spotifyd/spotifyd"
+HOMEPAGE=$EGIT_REPO_URI
 SRC_URI="$(cargo_crate_uris ${CRATES})"
 RESTRICT="mirror"
 LICENSE="unknown license" # Update to proper Gentoo format
@@ -146,3 +147,12 @@ IUSE=""
 
 DEPEND=""
 RDEPEND=""
+
+src_unpack() {
+	git-r3_src_unpack
+	cargo_src_unpack
+}
+
+src_install() {
+	cargo_src_install
+}
