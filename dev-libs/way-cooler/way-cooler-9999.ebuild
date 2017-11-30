@@ -90,8 +90,9 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
-DEPEND=">=virtual/rust-1.17.0"
 RDEPEND=""
+DEPEND="dev-libs/wlc
+	>=virtual/rust-1.17.0"
 
 src_unpack() {
 	git-r3_src_unpack
