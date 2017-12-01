@@ -188,7 +188,7 @@ SRC_URI="$(cargo_crate_uris ${CRATES})"
 RESTRICT="mirror"
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS=""
 IUSE=""
 
 RDEPEND="
