@@ -82,7 +82,7 @@ SRC_URI="$(cargo_crate_uris ${CRATES})"
 RESTRICT="mirror"
 LICENSE="MIT" # Update to proper Gentoo format
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS=""
 IUSE=""
 
 RDEPEND=""
